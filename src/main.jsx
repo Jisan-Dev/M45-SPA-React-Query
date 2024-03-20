@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import About from './components/about/index.jsx';
 import Contact from './components/contact/index.jsx';
 import Home from './components/home/index.jsx';
+import Users from './components/users/index.jsx';
 console.log(App);
 
 const router = createBrowserRouter([
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact />,
+      },
+      {
+        path: '/users',
+        loader: () => fetch('https://jsonplaceholder.typicode.com/users'),
+        element: <Users />,
       },
     ],
   },
