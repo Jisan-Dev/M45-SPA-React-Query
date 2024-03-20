@@ -1,9 +1,12 @@
 // import PropTypes from 'prop-types';
-import { useLoaderData, useNavigate } from 'react-router-dom';
+import { useLoaderData, useNavigate, useParams } from 'react-router-dom';
 
 const UserDetails = () => {
   const user = useLoaderData();
   const navigate = useNavigate();
+  const { userId } = useParams();
+
+  console.log(userId);
 
   const returnOneStepHandler = () => {
     navigate(-1);
