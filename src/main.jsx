@@ -8,12 +8,14 @@ import Contact from './components/contact/index.jsx';
 import Home from './components/home/index.jsx';
 import Users from './components/users/index.jsx';
 import UserDetails from './components/user-details/index.jsx';
+import NotFoundPage from './components/notfound-page/index.jsx';
 console.log(App);
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Home />,
+    errorElement: <NotFoundPage />,
     children: [
       {
         path: '/about',
