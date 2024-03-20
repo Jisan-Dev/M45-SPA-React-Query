@@ -1,14 +1,18 @@
 import { useLoaderData } from 'react-router-dom';
+import User from '../user';
 
 const Users = () => {
   const users = useLoaderData();
   console.log(users);
+
   return (
     <div>
       <h2 className="text-2xl text-bol">USERS: {users.length}</h2>
-      <p className="max-w-lg mx-auto">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas voluptates inventore fuga, tenetur expedita laborum error beatae quas ad impedit.
-      </p>
+      <div className="grid grid-cols-3 gap-4">
+        {users.map((user) => (
+          <User key={user.id} user={user} />
+        ))}
+      </div>
     </div>
   );
 };
