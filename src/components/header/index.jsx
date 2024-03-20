@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -11,12 +11,14 @@ const Header = () => {
         <Link className="text-indigo-400 mr-4" to="/about">
           About
         </Link>
-        <Link className="text-indigo-400 mr-4" to="/contact">
+
+        {/*NavLink gives us a className "active" over the element when the particular link is active */}
+        <NavLink className="text-indigo-400 mr-4" to="/contact">
           Contact Us
-        </Link>
-        <Link className="text-indigo-400 mr-4" to="/users">
+        </NavLink>
+        <NavLink to="/users" className="text-indigo-400 mr-4">
           Users
-        </Link>
+        </NavLink>
       </nav>
     </div>
   );
