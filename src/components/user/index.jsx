@@ -11,9 +11,9 @@ const User = ({ user }) => {
         <p>Phone: {phone}</p>
       </div>
       <div>
-        <button className="rounded-lg px-5 py-2 text-base bg-[#1a1a1a] cursor-pointer border border-lime-300 border-opacity-40">
-          <Link to={`/users/${id}`}> Show Details </Link>
-        </button>
+        <Link to={`/users/${id}`}>
+          <button className="rounded-lg px-5 py-2 text-base bg-[#1a1a1a] cursor-pointer border border-lime-300 border-opacity-40">Show Details</button>
+        </Link>
       </div>
     </div>
   );
