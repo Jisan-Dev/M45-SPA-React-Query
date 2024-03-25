@@ -24,6 +24,12 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact />,
+        // children: [
+        //   {
+        //     index: true,
+        //     element: <
+        //   }
+        // ]
       },
       {
         path: '/users',
